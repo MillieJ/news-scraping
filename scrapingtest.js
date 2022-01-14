@@ -10,6 +10,8 @@ request('https://www.businessdailyafrica.com', (error, response, html) => {
 
 
 //Gives a giant object
+//run through load method in cheerio
+
 /*const request = require('request');
 const cheerio = require('cheerio');
 
@@ -25,7 +27,7 @@ request('https://www.businessdailyafrica.com', (error, response, html) => {
 
 
 
-const request = require('request');
+/*const request = require('request');
 const cheerio = require('cheerio');
 
 
@@ -35,12 +37,14 @@ request('https://www.businessdailyafrica.com', (error, response, html) => {
         const $ = cheerio.load(html);
         const siteHeading = $('.page-box-inner');
         //console.log(siteHeading.html());
-        console.log(siteHeading.text());
+        //console.log(siteHeading.text());
+        const output = siteHeading.find('h3').text();
+        console.log(output);
     }
-}); 
+}); */
 
 
-/*const request = require('request');
+const request = require('request');
 const cheerio = require('cheerio');
 
 
@@ -56,4 +60,5 @@ request('https://www.businessdailyafrica.com', (error, response, html) => {
            console.log(title);
        });
     }
-}); */
+}); 
+
